@@ -1,6 +1,24 @@
 fernetKey: aERBZE5MN3E0TjRjU2xzQWxCdTNIUks0WGFTZThoWXc=
 webserverSecretKey: aERBZE5MN3E0TjRjU2xzQWxCdTNIUks0WGFTZThoWXc=
+
 executor: "KubernetesExecutor"
+
+# Environment variables for all airflow containers
+# other than init containers.
+env: 
+  - name: "AIRFLOW__KUBERNETES__DELETE_WORKER_PODS"
+    value: "false"
+  - name: "AIRFLOW__WEBSERVER__LOG_FETCH_TIMEOUT_SEC"
+    value: "15"
+  - name: "AIRFLOW__LOGGING__LOGGING_LEVEL"
+    value: "INFO"
+  - name: "AIRFLOW__LOGGING__REMOTE_LOGGING"
+    value: "True"
+  - name: "AIRFLOW__LOGGING__REMOTE_LOG_CONN_ID"
+    value: "wasb_default"
+  - name: "AIRFLOW__LOGGING__REMOTE_BASE_LOG_FOLDER"
+    value: "wasb_logs"
+
 
 dags:
   gitSync:
