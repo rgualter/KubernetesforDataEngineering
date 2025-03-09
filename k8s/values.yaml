@@ -11,3 +11,7 @@ dags:
     depth: 1
     maxFailures: 0
     subPath: "dags"
+
+logs:
+  persistence:
+    enabled: true
