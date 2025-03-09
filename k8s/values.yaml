@@ -1,6 +1,6 @@
 fernetKey: aERBZE5MN3E0TjRjU2xzQWxCdTNIUks0WGFTZThoWXc=
 webserverSecretKey: aERBZE5MN3E0TjRjU2xzQWxCdTNIUks0WGFTZThoWXc=
-executor: KubernetesExecutor
+#executor: KubernetesExecutor
 
 dags:
   gitSync:
@@ -12,6 +12,14 @@ dags:
     maxFailures: 0
     subPath: "dags"
 
-logs:
-  persistence:
-    enabled: true
+  #persistence:
+  #  # Enable persistent volume for storing logs
+  #  enabled: true
+  #  # Volume size for logs
+  #  size: 10Gi
+  #  # Annotations for the logs PVC
+  #  annotations: {}
+  #  # If using a custom storageClass, pass name here
+  #  storageClassName:
+  #  ## the name of an existing PVC to use
+  #  existingClaim:
