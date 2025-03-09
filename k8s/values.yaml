@@ -1,6 +1,6 @@
 fernetKey: aERBZE5MN3E0TjRjU2xzQWxCdTNIUks0WGFTZThoWXc=
 webserverSecretKey: aERBZE5MN3E0TjRjU2xzQWxCdTNIUks0WGFTZThoWXc=
-#executor: KubernetesExecutor
+executor: "KubernetesExecutor"
 
 dags:
   gitSync:
